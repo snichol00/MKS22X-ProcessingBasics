@@ -27,8 +27,10 @@ void draw() {
   
   fill(255);
   text("Click the mouse to increase levels, press a key to decrease levles",20,20);
+  fill(255, 0, 0);
+  triangle(0, height - 10, width, height - 10, width / 2, 10);
+  gasket(levels,0, height - 10, width, height - 10, width / 2, 10);
 
-  gasket(levels,0, height-10, width, height-10, width/2, 10);
 
  //koch(levels,width-10, height/2,10, height/3 ); 
  //other fractal you can do! This requires a bit more math, or you can look up the coordinates.
