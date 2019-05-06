@@ -20,12 +20,12 @@ void gasket(int levels, float v1x, float v1y, float v2x, float v2y, float v3x, f
       fill(255);
       triangle((v1x + v2x) / 2, (v1y + v2y) / 2, (v1x + v3x) / 2, (v1y + v3y) / 2, (v2x + v3x) / 2, (v2y + v3y) / 2);
       levels--;
+      if (levels != 0) {
+        gasket(levels, v1x, v1y, (v1x + v2x) / 2, (v1y + v2y) / 2, (v1x + v3x) / 2, (v1y + v3y) / 2);
+        gasket(levels, v2x, v2y, (v1x + v2x) / 2, (v1y + v2y) / 2, (v2x + v3x) / 2, (v2y + v3y) / 2);
+        gasket(levels, v3x, v3y, (v2x + v3x) / 2, (v2y + v3y) / 2, (v1x + v3x) / 2, (v1y + v3y) / 2);
+      }
   }
-    if (levels != 0) {
-      gasket(levels, v1x, v1y, (v1x + v2x) / 2, (v1y + v2y) / 2, (v1x + v3x) / 2, (v1y + v3y) / 2);
-      gasket(levels, v2x, v2y, (v1x + v2x) / 2, (v1y + v2y) / 2, (v2x + v3x) / 2, (v2y + v3y) / 2);
-      gasket(levels, v3x, v3y, (v2x + v3x) / 2, (v2y + v3y) / 2, (v1x + v3x) / 2, (v1y + v3y) / 2);
-    }
 } 
 
 void draw() {
